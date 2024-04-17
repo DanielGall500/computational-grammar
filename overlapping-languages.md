@@ -11,7 +11,8 @@ The theorem comes to the conclusion that none of the above types of language are
 
 #### What is actually learnable then?
 Well, with the devastating theorem introduced previously, we know that the types of languages we're interested in are not learnable. However, **maybe a subset of these languages are**. For instance, maybe the shaded in section below is learnable, and outside this section is not...
-![clipboard.png](inkdrop://file:gw2alWb6J)
+
+<img src="img/overlapping/possibly-learnable-grammars.png" alt="drawing" width="300"/>
 
 ## Overlapping of Languages
 
@@ -22,7 +23,7 @@ CursL = {English, German, French}
 ```
 English would be a smallest language of this class, but the set of expressions ("Hello", "How are you?") would not be a smallest language of this class, as it is a subset of English. German and French also can be a smallest language of this class, but any subset of their sentences would not be.
 
-![clipboard.png](inkdrop://file:s5gR4m-Dz)
+<img src="img/overlapping/smallest-L.png" alt="drawing" width="300"/>
 
 #### Distinguishing set DSmallL
 DSmallL is a finite set of sentences which distinguishes a language L from any other. For instance,
@@ -38,17 +39,18 @@ In this case, the *smallest language* in CursL would be English for the *disting
 #### Over-Generalisation
 An example of u-shaped learning is in babies which are learning the rules of language for the first time. We see that at the beginning they are memorising exactly what they've heard and so their linguistic performance is high since they are saying acceptable sentences. However, over time they over-generalise what they are seeing in the data they are presented with an encounter exception to the rules (for instance, irregular verbs). Then they learn these exceptions and they reach the high point again on the curve.
 
-![clipboard.png](inkdrop://file:9hxmS9Y5M)
+<img src="img/overlapping/U-curve.png" alt="drawing" width="300"/>
 ## Regular Language
 **Definition**: "A **regular language** is a language that can be expressed with a [regular expression](https://brilliant.org/wiki/regular-expressions/) or a deterministic or non-deterministic [finite automata](https://brilliant.org/wiki/finite-state-machines/) or state machine."
 
 We can see below the modelling of a very simple and deterministic Finiste State Automaton, which will accept certain states (represented by a tick) and reject other (represented by an X).
 
-![rn_image_picker_lib_temp_9f058fec-f63c-4d26-bef1-da70da89c92e.jpg](inkdrop://file:kEyAEZ3sT)
+<img src="img/overlapping/FST-machine-basic.jpeg" alt="drawing" width="300"/>
 These types of machines can be **forward-deterministic**, which means they are deterministic in this original form like we see above, and they can also be **reverse-deterministic**, which means that they remain deterministic even after we reverse the direction of the arrows and swap the *start states* with the *terminal / end states*.
 <br>
 We're interested in **machines where the reverse-machine is non-deterministic**. We can see an example of a deterministic machine whose reverse-machine is non-deterministic below.
-![rn_image_picker_lib_temp_35c1beac-cfab-45ad-9311-26b0dae53f75.jpg](inkdrop://file:zgJxEPcgX)
+
+<img src="img/overlapping/non-deterministic-example.jpeg" alt="drawing" width="300"/>
 The reason that the above becomes non-deterministic is that we see there is the case of the top-left node where an "a" is given as input. In this case, there are two options for which state an "a" input ought to lead to.
 
 #### Batch vs Incremental
